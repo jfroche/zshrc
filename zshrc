@@ -78,10 +78,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
 
 for file in $HOME/.zsh/rc/*
 do
   source $file
 done
 
+if [ "$TMUX" = "" ]; then tmux; fi

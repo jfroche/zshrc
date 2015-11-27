@@ -40,12 +40,18 @@ ZSH_THEME="robbyrussell"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
+#ZSH_TMUX_AUTOSTART=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github autojump python tmux)
+if [ -z "$XAUTHORITY" ]; then
+plugins=(git github autojump python vi-mode thefuck golang)
+else
+plugins=(git github autojump python vi-mode tmux thefuck golang)
+ZSH_TMUX_AUTOSTART=true
+
+fi
 
 # User configuration
 
@@ -86,5 +92,7 @@ for file in $HOME/.zsh/rc/*
 do
   source $file
 done
-
-if [ "$TMUX" = "" ]; then tmux; fi
+#cd . #so autoenv runs all the time, even when you open a tmux split
+#source ~/.autoenv/activate.sh
+#cd .
+#if [ "$TMUX" = "" ]; then tmux; fi

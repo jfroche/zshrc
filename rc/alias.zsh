@@ -10,3 +10,6 @@ alias rm='rm -v'
 alias mv='mv -v'
 alias cp='cp -v'
 alias tmux='TERM=xterm-256color /usr/bin/tmux'
+alias ']'='xdg-open'
+alias vim='nocorrect vim'
+alias grep="grep --color --exclude-dir=.git --exclude=.svn-base --exclude-dir=.svn --exclude=entries --exclude=all-wcprops --exclude=.pyc -i"

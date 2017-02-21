@@ -1,0 +1,5 @@
+*
+!/.zsh
+!/.zshrc
+!/.oh-my-zsh
+!/.gitignore.d/zsh

@@ -1,0 +1,21 @@
+alias ll='ls -l'
+alias lrt='ls -lrt'
+alias lla='ls -la'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias -- ++='pushd +0'
+alias -- --='pushd -1'
+alias mmv='noglob zmv -W'
+alias rm='rm -v'
+alias tmux='TERM=xterm-256color /usr/bin/tmux'
+alias ']'='xdg-open'
+alias vim='nocorrect vim'
+alias grep="grep --color --exclude-dir=.git --exclude=.svn-base --exclude-dir=.svn --exclude=entries --exclude=all-wcprops --exclude=.pyc -i"
+alias cp="rsync -avz"
+alias mv='rsync --progress -ah --remove-sent-files'
+alias top='htop'
+alias whois='whois -H'
+alias weather='curl -4 http://wttr.in/Godinne'
+alias copylastcommand='history -p !! | xsel -ib'
+alias gh="git remote -v | awk '/fetch/{print \$2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@org:@org/@' -e 's@com:@com/@' -e 's@be:@be/@' -e 's@\.git\$@@'"
+alias dr='docker run -it --rm'

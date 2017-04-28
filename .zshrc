@@ -3,9 +3,9 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 if [ -z "$XAUTHORITY" ]; then
-plugins=(git git-prompt github autojump python vi-mode thefuck golang autoenv rvm zsh-syntax-highlighting taskwarrior)
+plugins=(git git-prompt github autojump python vi-mode golang autoenv rvm zsh-syntax-highlighting taskwarrior)
 else
-plugins=(git git-prompt github autojump python vi-mode tmux thefuck golang autoenv rvm zsh-syntax-highlighting taskwarrior)
+plugins=(git git-prompt github autojump python vi-mode tmux golang autoenv rvm zsh-syntax-highlighting taskwarrior)
 ZSH_TMUX_AUTOSTART=true
 
 fi
@@ -26,3 +26,4 @@ done
 
 bindkey '^R' history-incremental-search-backward
 bindkey '^R' history-incremental-pattern-search-backward
+FZF_TMUX=1
